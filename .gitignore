@@ -1,0 +1,69 @@
+# ============================================================
+# AutoSkip — Android 项目忽略规则
+# 原则：只提交源码 / Gradle 配置 / 资源 / 文档，
+#       构建产物、IDE 本地配置、签名密钥、机器相关路径一律不入库。
+# ============================================================
+
+# ---------- Gradle 构建产物 ----------
+# 注意：gradle/wrapper/gradle-wrapper.jar 和 gradlew 脚本必须提交，不要忽略
+.gradle/
+build/
+**/build/
+app/release/
+app/debug/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+output.json
+captures/
+lint-results*.html
+lint-results*.xml
+
+# ---------- 原生编译 / 性能分析 ----------
+.externalNativeBuild/
+.cxx/
+*.hprof
+
+# ---------- 本地机器相关配置 ----------
+# 每台机器的 SDK 路径不同，必须由本地生成
+local.properties
+# 签名相关：密码与密钥文件绝不入库
+signing.properties
+keystore.properties
+*.jks
+*.keystore
+*.p12
+*.pem
+keystore/
+
+# ---------- IDE（Android Studio / IntelliJ）----------
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+.kotlin/
+
+# ---------- 本项目的本地临时目录 ----------
+# 纯 JVM 测试的编译输出（javac -d tools/out ...）
+/tools/out/
+# 本机打包出来的 APK 存放目录
+/dist/
+# 本地工具/记忆数据
+.workbuddy/
+
+# ---------- 操作系统生成的垃圾文件 ----------
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# ---------- 日志与临时文件 ----------
+*.log
+*.tmp
+*.bak
+*.swp
+*.orig
+*.rej

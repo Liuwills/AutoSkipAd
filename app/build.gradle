@@ -1,0 +1,62 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.autoskip.ad'
+    compileSdk 34
+    // 本机只装了 36.0.0；如有 34.0.0 可删掉这行
+    buildToolsVersion '36.0.0'
+
+    defaultConfig {
+        applicationId "com.autoskip.ad"
+        minSdk 26
+        targetSdk 34
+        versionCode 2
+        versionName "1.1"
+        resConfigs "zh", "en"
+    }
+
+    signingConfigs {
+        release {
+            // 自签名证书，方便直接侧载安装；如需上架请替换为自己的正式签名
+            storeFile file("../keystore/autoskip.jks")
+            storePassword "autoskip"
+            keyAlias "autoskip"
+            keyPassword "autoskip"
+        }
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+        }
+        release {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        encoding 'UTF-8'
+    }
+
+    buildFeatures {
+        viewBinding false
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'com.google.android.material:material:1.11.0'
+}

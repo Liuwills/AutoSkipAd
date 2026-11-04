@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">短剧广告跳过助手</string>
+    <string name="service_label">短剧广告跳过助手</string>
+    <string name="title_app_list">生效应用</string>
+    <string name="acc_desc">用于识别短剧、短视频应用里的广告倒计时，在倒计时结束后自动点击“跳过”或上滑切到下一个视频。本服务只读取界面上的文字，不会上传任何数据。</string>
+
+    <string name="subtitle">倒计时一结束，自动点跳过或上滑，手不用碰屏幕</string>
+    <string name="card_service_title">无障碍服务</string>
+    <string name="service_on">已开启，正在后台守候</string>
+    <string name="service_off">未开启，功能无法工作</string>
+    <string name="service_on_hint">回到短剧 App 即可，检测到广告会自动处理</string>
+    <string name="service_off_hint">点击右侧按钮，在系统设置里找到本应用并打开开关</string>
+    <string name="btn_open_settings">去开启</string>
+    <string name="btn_opened">已开启</string>
+
+    <string name="card_main_title">自动跳过</string>
+    <string name="master_title">启用自动跳过</string>
+    <string name="master_hint">总开关，关闭后不监听任何应用</string>
+
+    <string name="card_mode_title">处理方式</string>
+    <string name="mode_smart">智能（推荐）</string>
+    <string name="mode_smart_hint">有“跳过”按钮就点按钮，没有就上滑</string>
+    <string name="mode_countdown">只上滑</string>
+    <string name="mode_countdown_hint">倒计时结束后直接滑到下一个视频</string>
+    <string name="mode_click">只点跳过</string>
+    <string name="mode_click_hint">只点“跳过/关闭广告”，不改变视频进度</string>
+    <string name="mode_log">演练模式</string>
+    <string name="mode_log_hint">只在日志里显示识别结果，不执行任何操作</string>
+
+    <string name="card_behavior_title">细节</string>
+    <string name="delay_title">结束后延迟</string>
+    <string name="swipe_title">每次上滑次数</string>
+    <string name="vibrate_title">动作时轻微震动</string>
+    <string name="verbose_title">记录每次扫描（调试用）</string>
+    <string name="swipe_end_title">没按钮时自动上滑</string>
+    <string name="swipe_end_hint">广告没有「跳过」按钮时直接滑走；部分 App 会顺带滑掉一整集剧情，默认关闭</string>
+
+    <string name="card_apps_title">生效应用</string>
+    <string name="apps_hint">只在这些应用里才生效</string>
+
+    <string name="card_test_title">调试</string>
+    <string name="btn_test_swipe">测试一次上滑</string>
+    <string name="btn_clear_log">清空</string>
+    <string name="btn_dump">抓取当前界面</string>
+    <string name="btn_copy_log">复制</string>
+    <string name="dump_need_service">请先开启无障碍服务，并切到广告画面上</string>
+    <string name="dump_done">已抓取，日志里可查看/复制</string>
+    <string name="dump_hint">广告卡着不跳过时：先让广告在屏幕上停几秒，再切回本应用点「抓取当前界面」，它会自动带上刚才那份广告画面；点「复制」把内容发出来就能定位是规则没命中还是界面读不到</string>
+    <string name="copy_done">日志已复制</string>
+    <string name="log_empty">暂无日志，去短剧 App 里播一会儿广告试试</string>
+
+    <string name="apps_selected_count">已选择 %1$d 个应用</string>
+    <string name="apps_none">未选择任何应用</string>
+    <string name="search_hint">搜索应用名或包名</string>
+    <string name="btn_select_all">全选</string>
+    <string name="btn_select_none">清空</string>
+    <string name="need_service">请先开启无障碍服务</string>
+    <string name="test_done">已触发一次上滑</string>
+
+    <string name="mode_summary">%1$s · 延迟 %2$d ms</string>
+</resources>
